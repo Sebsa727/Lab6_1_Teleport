@@ -37,3 +37,13 @@ El repo NO trae los archivos pesados del modelo (límite de 100 MB de GitHub):
   a `Assets/Modelo 3D/`, reemplazando.
 - **B:** abre el proyecto y luego **Assets → Import Package → Custom Package…** → `Modelo_Planta_Andahuasi.unitypackage`
   → Import (todo). Después ejecuta **Lab 6.1 → 1. Configurar escenas**.
+
+## Escena DEMO liviana (recomendada para el Quest)
+El modelo completo de Andahuasi tiene ~8 millones de triángulos en ~10 000 objetos: en el visor se congela.
+Para mostrar el teletransporte usa **Lab 6.1 → 0. Crear escena DEMO liviana (para el Quest)**:
+- Crea `Assets/Scenes/Escena_Teleport_Demo.unity`: patio de 60 × 60 m con losas, plataformas a distintas alturas,
+  techo de caseta y pasarela (todas teletransportables), obstáculos (transformador, caseta, cerco) y los modelos
+  chicos del paquete (torre, postes, tanque, tachos).
+- Mismos pasos de la guía: OVRCameraRigInteraction, Mesh Collider + Teleport Interactable + Collider Surface +
+  Reticle Data Teleport, TeleportHotspot en cada plataforma y Floor Level.
+- La deja como primera escena del build y desactiva Escena_Andahuasi. Después: **File → Build And Run**.

@@ -19,7 +19,7 @@ namespace Lab61
     //  4. Tracking Origin Type = Floor Level y escenas agregadas al Build Settings.
     // Se ejecuta sola la primera vez que se abre el proyecto (pide confirmación) o desde el menú "Lab 6.1".
     [InitializeOnLoad]
-    public static class Lab61Setup
+    public static partial class Lab61Setup
     {
         const string ScenePath = "Assets/Scenes/Escena_Andahuasi.unity";
         const string JoystickScenePath = "Assets/Scenes/Escena_Andahuasi_Joystick.unity";
@@ -320,7 +320,11 @@ namespace Lab61
 
         static void UpdateBuildSettings()
         {
-            var scenes = new List<EditorBuildSettingsScene> { new EditorBuildSettingsScene(ScenePath, true) };
+            // Si existe la escena demo liviana, es la que se instala en el Quest; Andahuasi completa queda desactivada.
+            bool hasDemo = File.Exists(DemoScenePath);
+            var scenes = new List<EditorBuildSettingsScene>();
+            if (hasDemo) scenes.Add(new EditorBuildSettingsScene(DemoScenePath, true));
+            scenes.Add(new EditorBuildSettingsScene(ScenePath, !hasDemo));
             if (File.Exists(JoystickScenePath)) scenes.Add(new EditorBuildSettingsScene(JoystickScenePath, false));
             EditorBuildSettings.scenes = scenes.ToArray();
         }

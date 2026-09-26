@@ -25,3 +25,7 @@ Assets/Modelo 3D/Modelos/Planta-Andahuasi-Electrico.obj
 Assets/Modelo 3D/Texturas-adicionales/**/*
 !Assets/Modelo 3D/Texturas-adicionales/**/
 !Assets/Modelo 3D/Texturas-adicionales/**/*.meta
+
+# Unity Version Control (Plastic SCM) - no se usa, el proyecto va con Git
+.plastic/
+ignore.conf

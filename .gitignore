@@ -1,0 +1,27 @@
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+*.csproj
+*.sln
+*.suo
+*.user
+*.pidb
+*.booproj
+*.apk
+*.aab
+.vs/
+.vscode/
+.idea/
+
+# Modelo 3D pesado (>100 MB, limite de GitHub). Viene de Modelo_Planta_Andahuasi.unitypackage
+# Se conservan los .meta para que materiales y escenas no pierdan las referencias (GUID).
+Assets/Modelo 3D/Modelos/Planta-Andahuasi-Electrico.obj
+Assets/Modelo 3D/Texturas-adicionales/**/*
+!Assets/Modelo 3D/Texturas-adicionales/**/
+!Assets/Modelo 3D/Texturas-adicionales/**/*.meta
